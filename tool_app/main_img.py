@@ -64,21 +64,31 @@ class CameraApplication(tkinter.Frame):
         self.label_quality = tkinter.Label(root, text='画質')
         self.label_quality.pack()
 
-        # スタート/ストップボタン
-        button_1 = tkinter.Button(
-            text='START/STOP', width=30, command=self.start_stop)
-        button_1.pack(side=tkinter.BOTTOM)
+        # botton用のcanvasを開く
+        # ボタンを配置するためのフレームを作成 with GPT4
+        button_frame = tkinter.Frame(root)
+        button_frame.pack(side=tkinter.BOTTOM, fill=tkinter.X)
 
-        # 終了ボタン
+        # スタート/ストップボタン with GPT4
+        button_1 = tkinter.Button(
+            button_frame, text='START/STOP', width=30, command=self.start_stop)
+        button_1.pack(side=tkinter.LEFT, expand=True, fill=tkinter.X)
+
+        # 結果の出力用 & 内部データリセット用コード with GPT4
         button_2 = tkinter.Button(
-            text='QUIT', width=30, command=self.quit_app)
-        button_2.pack(side=tkinter.BOTTOM)
+            button_frame, text='OUTPUT / RESET', width=30, command=self.output_reset)
+        button_2.pack(side=tkinter.LEFT, expand=True, fill=tkinter.X)
+
+        # 終了ボタン with GPT4
+        button_3 = tkinter.Button(
+            button_frame, text='QUIT', width=30, command=self.quit_app)
+        button_3.pack(side=tkinter.LEFT, expand=True, fill=tkinter.X)
 
         # キャンバス(画像表示)
         self.canvas_cam = tkinter.Canvas(
             self.master, width=1280, height=960, bg='black')
         self.id = self.canvas_cam.create_text(
-            640, 360, text="Some Text", fill="white",
+            640, 360, text="スタート画面", fill="white",
             font=("Helvetica 120 bold"))
         self.canvas_cam.pack()
 
@@ -100,7 +110,7 @@ class CameraApplication(tkinter.Frame):
         model_name = 'enet_b0_8_best_vgaf'
         # model_name = 'enet_b0_8_best_afew'
         # model_name='enet_b0_8_va_mtl'
-        # model_name='enet_b2_8'
+        # model_name = 'enet_b2_8'
         self.fer = HSEmotionRecognizer(model_name=model_name, device=device)
 
         # 感情を表す文字・顔文字の辞書
@@ -163,6 +173,14 @@ class CameraApplication(tkinter.Frame):
     def quit_app(self):
         self.df.to_csv(self.table_path / "result.csv", index=None)
         self.root.destroy()
+
+    # アウトプット/リセットボタン---------------------------------------------------
+    # 押されると、そこまでの結果を保存したのち、初期化する
+    def output_reset(self):
+        self.df.to_csv(self.table_path / "result.csv", index=None)
+        self.df = self.df.drop(range(len(self.df)))
+        folder_path = get_path()
+        self.photos_path, self.table_path = mk_dir(folder_path)
 
     # 人の顔を検出する関数----------------------------------------------------
 

@@ -32,7 +32,7 @@ model_name = 'enet_b0_8_best_afew'
 fer = HSEmotionRecognizer(model_name=model_name, device='cpu')
 
 # 画像の読み込みと編集
-fpath = '20180720_174416.jpg'
+fpath = 'file_path'
 frame_bgr = cv2.imread(
     "/Users/ishidakazuma/論文用コード/Kaomozi_Tool/tool_app/code/20180720_174416.jpg")
 plt.figure(figsize=(5, 5))
