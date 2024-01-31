@@ -130,7 +130,7 @@ class CameraApplication(tkinter.Frame):
         幸せ : http://www.kaomoji.com/kao/text/yorokobu.htm
         真顔 : http://www.kaomoji.com/kao/text/bisyou.htm
         ネガティブ : http://www.kaomoji.com/kao/text/fumann.htm
-        "Unknown" : 
+        "Unknown" : https://kmoji.com/category/22
         """
         self.kaomoji = {
             'Anger': "（￣へ￣； ムムム",     # 怒り
