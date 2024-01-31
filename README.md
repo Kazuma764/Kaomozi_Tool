@@ -110,6 +110,6 @@ hsemotion-main内のsetup.pyを実行することで、opencvを除いたライ�
 1. すぽてくブログ(2022)「【Python】USBカメラの映像をGUIに表示する方法【Tkinter】」, https://shinshin-log.com/python-usbcamera/, 2023年11月30日閲覧。
 1. @dgkmtu(dgk)(2019)「【Python】scheduleを使ってモジュールを定期実行させよう」, https://qiita.com/dgkmtu/items/3bd3794b44a0aa03bfe3, 2023年11月30日閲覧。
 
-<h3>顔文字の出典</h3>
+<h3>顔文字の出典 2023年11月30日閲覧.</h3>
 1. 顔文字BOX https://kmoji.com/category/22
 2. http://www.kaomoji.com (サーバー停止中?)
