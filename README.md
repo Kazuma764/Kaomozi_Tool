@@ -92,7 +92,7 @@ hsemotion-main内のsetup.pyを実行することで、opencvを除いたライ�
 **Githubのリポジトリ**
 - メインリポジトリ(スペック表などが置いてある)：<a href = "https://github.com/HSE-asavchenko/face-emotion-recognition/tree/main">リンク</a>
 - ライブラリなど実際にコード作成で参考にしたリポジトリ：<a href = "https://github.com/HSE-asavchenko/hsemotion">リンク</a>
-- 本リポジトリ内の"face-emotion-recognition-main"と"hsemotion-main"は, 上記のレポジトリからコピーしてきたディレクトリとなります.
+- 本リポジトリ内の"face-emotion-recognition-main"と"hsemotion-main"は, 上記のリポジトリからコピーしてきたディレクトリとなります.
 
 論文
 ```
@@ -112,5 +112,6 @@ hsemotion-main内のsetup.pyを実行することで、opencvを除いたライ�
 1. @dgkmtu(dgk)(2019)「【Python】scheduleを使ってモジュールを定期実行させよう」, https://qiita.com/dgkmtu/items/3bd3794b44a0aa03bfe3, 2023年11月30日閲覧。
 
 <h3>顔文字の出典 2023年11月30日閲覧.</h3>
+
 1. 顔文字BOX https://kmoji.com/category/22
 1. kaomoji.com http://www.kaomoji.com (サーバー停止中?)
