@@ -92,6 +92,7 @@ hsemotion-main内のsetup.pyを実行することで、opencvを除いたライ�
 **Githubのリポジトリ**
 - メインリポジトリ(スペック表などが置いてある)：<a href = "https://github.com/HSE-asavchenko/face-emotion-recognition/tree/main">リンク</a>
 - ライブラリなど実際にコード作成で参考にしたリポジトリ：<a href = "https://github.com/HSE-asavchenko/hsemotion">リンク</a>
+- 本リポジトリ内の"face-emotion-recognition-main"と"hsemotion-main"は, 上記のレポジトリからコピーしてきたディレクトリとなります.
 
 論文
 ```
@@ -112,4 +113,4 @@ hsemotion-main内のsetup.pyを実行することで、opencvを除いたライ�
 
 <h3>顔文字の出典 2023年11月30日閲覧.</h3>
 1. 顔文字BOX https://kmoji.com/category/22
-2. http://www.kaomoji.com (サーバー停止中?)
+1. kaomoji.com http://www.kaomoji.com (サーバー停止中?)
